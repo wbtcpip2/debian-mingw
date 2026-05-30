@@ -39,7 +39,7 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # ⭐ PATCH: aggiorna Meson alla versione richiesta da fontconfig (>= 1.11)
-RUN pip3 install --upgrade meson
+RUN pip3 install --break-system-packages --upgrade meson
 
 # Assicura che /usr/local/bin venga usato prima di /usr/bin
 ENV PATH="/usr/local/bin:${PATH}"
