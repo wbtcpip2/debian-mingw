@@ -32,7 +32,6 @@ RUN apt-get update && apt-get install -y \
     ragel \
     python3-cairo \
     libshaderc-dev \
-    shaderc \
     libtool \
     automake \
     autoconf \
