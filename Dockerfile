@@ -36,7 +36,9 @@ RUN apt-get update && apt-get install -y \
     automake \
     autoconf \
     libglib2.0-dev \
+    xz-utils \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
+
 
 # ⭐ PATCH: aggiorna Meson alla versione richiesta da fontconfig (>= 1.11)
 RUN pip3 install --break-system-packages --upgrade meson
