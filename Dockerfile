@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -31,6 +31,7 @@ RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     ragel \
     python3-cairo \
+    libshaderc-dev \
     shaderc \
     libtool \
     automake \
