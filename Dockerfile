@@ -31,7 +31,7 @@ RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     ragel \
     python3-cairo \
-    libshaderc-dev \
+    shaderc \
     libtool \
     automake \
     autoconf \
