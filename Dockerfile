@@ -38,7 +38,11 @@ RUN apt-get update && apt-get install -y \
     libglib2.0-dev \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
+# ⭐ PATCH: aggiorna Meson alla versione richiesta da fontconfig (>= 1.11)
+RUN pip3 install --upgrade meson
 
+# Assicura che /usr/local/bin venga usato prima di /usr/bin
+ENV PATH="/usr/local/bin:${PATH}"
 
 ENV CCACHE_DIR=/ccache
 RUN mkdir /ccache && chmod 777 /ccache
