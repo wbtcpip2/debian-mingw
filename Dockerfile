@@ -38,8 +38,11 @@ RUN apt-get update && apt-get install -y \
     libglib2.0-dev \
     xz-utils \
     gettext \
+    gettext-base \
+    gettext-tools \
     help2man \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
+
 
 # Aggiorna Meson e Ninja
 RUN pip3 install --break-system-packages --upgrade meson
