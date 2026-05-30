@@ -37,16 +37,14 @@ RUN apt-get update && apt-get install -y \
     autoconf \
     libglib2.0-dev \
     xz-utils \
+    gettext \
+    help2man \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-
-# ⭐ PATCH: aggiorna Meson alla versione richiesta da fontconfig (>= 1.11)
+# Aggiorna Meson e Ninja
 RUN pip3 install --break-system-packages --upgrade meson
-# PATCH Ninja
 RUN pip3 install --break-system-packages --upgrade ninja
 
-
-# Assicura che /usr/local/bin venga usato prima di /usr/bin
 ENV PATH="/usr/local/bin:${PATH}"
 
 ENV CCACHE_DIR=/ccache
