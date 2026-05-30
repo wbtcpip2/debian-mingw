@@ -19,7 +19,9 @@ RUN apt-get update && apt-get install -y \
     pkg-config \
     ccache \
     mingw-w64 \
+    p7zip-full \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
+
 
 ENV CCACHE_DIR=/ccache
 RUN mkdir /ccache && chmod 777 /ccache
