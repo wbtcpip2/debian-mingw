@@ -20,7 +20,24 @@ RUN apt-get update && apt-get install -y \
     ccache \
     mingw-w64 \
     p7zip-full \
+    texinfo \
+    file \
+    flex \
+    bison \
+    gawk \
+    libgmp-dev \
+    libmpfr-dev \
+    libmpc-dev \
+    zlib1g-dev \
+    ragel \
+    python3-cairo \
+    shaderc \
+    libtool \
+    automake \
+    autoconf \
+    libglib2.0-dev \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
+
 
 
 ENV CCACHE_DIR=/ccache
