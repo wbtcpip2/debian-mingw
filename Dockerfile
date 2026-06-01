@@ -44,8 +44,9 @@ RUN apt-get update && apt-get install -y \
 # Meson + Ninja aggiornati
 RUN pip3 install --break-system-packages --upgrade meson ninja
 
-# ⭐ FIX libplacebo: serve jinja2 per il pre-processore GLSL
-RUN pip3 install --break-system-packages jinja2
+# ⭐ FIX libplacebo + mbedtls + shaderc: moduli Python necessari
+RUN pip3 install --break-system-packages jsonschema pyyaml jinja2
+
 
 ENV CCACHE_DIR=/ccache
 RUN mkdir /ccache && chmod 777 /ccache
